@@ -1,0 +1,616 @@
+
+/* ==================== General Styling ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+/* ==================== Header / Navigation Bar ==================== */
+header {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3rem;
+    z-index: 1000;
+}
+
+/* Website Logo */
+.logo {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-wrap: nowrap;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* ==================== Navigation Links ==================== */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Navigation Link Styling */
+li a {
+    position: relative;
+    color: white;
+    font-weight: 300;
+}
+
+/* Navigation Link Hover Indicator */
+li a::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    left: 0;
+    height: 5px;
+    top: 25px;
+    border-radius: 1rem;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+}
+
+/* Expand Hover Indicator */
+li a:hover::before {
+    width: 100%;
+}
+
+/* ==================== Visit GitHub Button ==================== */
+.visit-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 3rem;
+    border: none;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    text-wrap: nowrap;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+}
+
+/* GitHub Button Hover Effect */
+.visit-btn:hover {
+    background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 157, 255));
+    transform: scale(1.03);
+}
+
+/* ==================== Mobile Menu Icon ==================== */
+#menu-icon {
+    font-size: 2rem;
+    display: none;
+}
+
+/* ==================== General Section Styling ==================== */
+section {
+    min-height: 100vh;
+    padding: 8rem 12%;
+    width: 100%;
+    position: relative;
+}
+
+/* ==================== About Section ==================== */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* About Section Layout */
+.about .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+
+/* Profile Image */
+.about img {
+    width: 30vw;
+    border-radius: 50%;
+}
+
+/* ==================== Personal Information Box ==================== */
+.info-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Introduction Heading */
+.info-box h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* Main Name Heading */
+.info-box h1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+/* Gradient Professional Title */
+.info-box span {
+    background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 157, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+}
+
+/* ==================== Button Group ==================== */
+.btn-group {
+    display: flex;
+    gap: 1rem;
+}
+
+/* General Button Styling */
+.btn {
+    display: inline-block;
+    color: inherit;
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: 500;
+    text-wrap: nowrap;
+    transition: 0.2s ease-in-out;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+/* ==================== Social Media Icons ==================== */
+.socials {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Social Media Links */
+.socials a {
+    color: inherit;
+}
+
+/* Social Icon Styling */
+.socials i {
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+/* Social Icon Hover Effect */
+.socials i:hover {
+    transform: scale(1.1);
+}
+
+/* ==================== Section Titles ==================== */
+.section-title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+/* ==================== Experience Section ==================== */
+.experience-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+/* Experience Section Image */
+.experience img {
+    width: 24vw;
+    border-radius: 3rem;
+}
+
+/* ==================== Experience Grid Card ==================== */
+.grid-card {
+    border: 2px solid black;
+    border-radius: 3rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+/* Company Name and Employment Period */
+.company-info {
+    display: flex;
+    align-items: center;
+    gap: 13rem;
+}
+
+/* Remove Default Company Information Margins */
+.company-info h3,
+.company-info h5 {
+    margin: 0;
+}
+
+/* Experience Card Hover Effect */
+.grid-card:hover {
+    transform: scale(1.02);
+    background-color: black;
+    color: white;
+}
+
+/* Experience Card Icon */
+.grid-card i {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Gradient Job Title */
+.grid-card span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: linear-gradient(to right, #009dff, #ff00ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* ==================== Scrollbar Styling ==================== */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #009dff rgb(219, 219, 219);
+}
+
+/* Scrollbar Width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    background-color: rgb(219, 219, 219);
+    border-radius: 10px;
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #009dff, #ff00ff);
+    border-radius: 10px;
+}
+
+/* Scrollbar Thumb Hover Effect */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #ff00ff, #009dff);
+}
+
+/* ==================== Projects Section ==================== */
+
+/* Projects Grid Layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Individual Project Card */
+.project-card {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    border: 2px solid black;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/* Project Card Hover Effect */
+.project-card:hover {
+    background-color: black;
+    color: white;
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* Project Preview Image */
+.project-card img {
+    width: 20vw;
+    border-radius: 1rem;
+}
+
+/* Project Button Styling on Card Hover */
+.project-card:hover .btn {
+    border: 2px solid white;
+    color: white;
+}
+
+/* Project Button Hover Effect */
+.project-card:hover .btn:hover {
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+}
+
+/* Project Title */
+.project-card h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/* ==================== Contact Section ==================== */
+
+/* Contact Form Container */
+.input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* Text and Email Input Fields */
+.input-box input {
+    border-radius: 5rem;
+    border: 2px solid black;
+    padding: 1rem 5rem;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+/* Input Placeholder Styling */
+.input-box input::placeholder {
+    font-size: 1.5rem;
+}
+
+/* Input Field Wrapper */
+.input {
+    position: relative;
+}
+
+/* Input Field Icons */
+.input i {
+    position: absolute;
+    font-size: 2rem;
+    top: 50%;
+    left: 10px;
+    transform: translate(50%, -50%);
+}
+
+/* Message Textarea */
+.input-box textarea {
+    border-radius: 2rem;
+    border: 2px solid black;
+    padding: 1rem 5rem;
+    font-size: 1.5rem; /* Message Textbox */
+    width: 100%;
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Textarea Placeholder Styling */
+.input-box textarea::placeholder {
+    font-size: 1.5rem;
+}
+
+/* Message Icon Positioning */
+.input:has(textarea) i {
+    top: 1.5rem;
+    left: 10px;
+    transform: translate(50%, 0);
+}
+
+/* ==================== Footer Section ==================== */
+footer {
+    bottom: 0;
+    left: 0;
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer Navigation Links */
+footer ul {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Footer Link Styling */
+footer ul li a {
+    color: black;
+    font-weight: 600;
+}
+
+/* Copyright Text */
+.copyright {
+    font-size: 300;
+    margin-top: 2rem;
+}
+
+/* ==================== Responsive Design: Tablets and Small Laptops ==================== */
+@media (max-width: 1280px) {
+
+    /* Adjust Header Spacing */
+    header {
+        padding: 1rem 2rem;
+        gap: 2rem;
+    }
+
+    /* Reduce About Section Spacing */
+    .about .about-container {
+        gap: 3rem;
+    }
+
+    /* Stack Experience Content Vertically */
+    .experience-info {
+        flex-direction: column;
+    }
+
+    /* Adjust Contact Input Dimensions */
+    .input-box input {
+        padding: 2rem 5rem;
+        font-size: 2.5rem;
+    }
+
+    /* Adjust Input Placeholder Size */
+    .input input::placeholder {
+        font-size: 2.5rem;
+    }
+
+    /* Increase Contact Icon Size */
+    .input-box i {
+        font-size: 2.5rem;
+    }
+}
+
+/* ==================== Responsive Design: Tablets and Mobile Devices ==================== */
+@media (max-width: 768px) {
+
+    /* Adjust Header Layout */
+    header {
+        gap: 1rem;
+        padding: 1rem 1rem;
+    }
+
+    /* Reduce Logo Size */
+    header .logo {
+        font-size: 1rem;
+    }
+
+    /* Hide GitHub Button */
+    header .visit-btn {
+        display: none;
+    }
+
+    /* Stack About Content Vertically */
+    .about-container {
+        flex-direction: column;
+    }
+
+    /* Adjust Contact Input Dimensions */
+    .input-box input {
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+    }
+
+    /* Adjust Input Placeholder Size */
+    .input-box input::placeholder {
+        font-size: 1.5rem;
+    }
+
+    /* Hide Contact Input Icons */
+    .input-box i {
+        display: none;
+    }
+
+    /* Set Experience Grid to a Single Column */
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* Resize Experience Section Image */
+    .experience-info img {
+        width: 70vw;
+    }
+}
+
+/* ==================== Responsive Design: Small Mobile Devices ==================== */
+@media (max-width: 600px) {
+
+    /* Display Mobile Menu Icon */
+    header #menu-icon {
+        display: block;
+    }
+
+    /* Mobile Navigation Menu */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 3rem;
+        display: none;
+    }
+
+    /* Add Spacing Between Mobile Navigation Links */
+    .nav-links li {
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+
+    /* Display Active Mobile Navigation Menu */
+    .nav-links.active {
+        display: block;
+    }
+
+    /* Adjust Mobile Header Spacing */
+    header {
+        padding: 1rem 5rem;
+        gap: 8rem;
+    }
+
+    /* Increase Mobile Logo Size */
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    /* Resize About Section Image */
+    .about-container img {
+        width: 80vw;
+    }
+
+    /* Adjust Mobile Contact Input Fields */
+    .input-box input {
+        padding: 0.5rem 3rem;
+        width: 80%;
+        font-size: 1.5rem;
+    }
+
+    /* Adjust Mobile Input Placeholder Size */
+    .input-box input::placeholder {
+        font-size: 1.5rem;
+    }
+
+    /* Reduce Footer Navigation Spacing */
+    footer ul {
+        gap: 1rem;
+    }
+}
